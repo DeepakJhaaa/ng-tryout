@@ -15,4 +15,9 @@ addons:
 before_script:
   - npm install global @angular/cli
 
+script:
+  - ng lint
+  - ng test --watch false -browsers ChromeHeadless
+  - ng build --prod
+
 before_deploy: "echo 'ready?'"
