@@ -11,12 +11,17 @@ sudo: true
 
 addons:
   chrome: stable
+  sonarcloud:
+    organization: 'deepakjhaaa-github'
+    token:
+      secure: $SONAR_TOKEN
 
 before_script:
   - npm install global @angular/cli
 
 script:
   - ng lint
+  - sonar-scanner
   - ng test --watch false --browsers ChromeHeadless
   - ng build --prod
 
