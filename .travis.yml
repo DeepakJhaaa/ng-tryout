@@ -14,7 +14,7 @@ addons:
   sonarcloud:
     organization: 'deepakjhaaa-github'
     token:
-      secure: c2600acd88c613fd6da962d4ea806a63d910195d
+      secure: 'c2600acd88c613fd6da962d4ea806a63d910195d'
 
 before_script:
   - npm install global @angular/cli
