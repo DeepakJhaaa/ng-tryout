@@ -18,7 +18,6 @@ before_script:
   - npm install global @angular/cli
 
 script:
-  - sonar-scanner -Dsonar.verbose=true -X
   - ng lint
   - ng test --watch false --browsers ChromeHeadless
   - ng build --prod
