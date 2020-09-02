@@ -7,6 +7,11 @@ cache:
   directories:
     - node-modules
 
+sudo: true
+
+addons:
+  chrome: stable
+
 before_script:
   - npm install global @angular/cli
 
