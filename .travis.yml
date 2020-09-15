@@ -8,6 +8,10 @@ cache:
 
 sudo: true
 
+branches:
+  only:
+    - master
+
 addons:
   chrome: stable
   sonarcloud:
