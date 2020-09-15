@@ -22,4 +22,12 @@ script:
   - ng test --watch false --browsers ChromeHeadless
   - ng build --prod
 
-before_deploy: "echo 'ready?'"
+before_deploy: "echo 'Build is Ready.'"
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: 'encrypted key goes here'
+  app: ngx-tryout
+  on:
+    repo: DeepakJhaaa/ngx-tryout
