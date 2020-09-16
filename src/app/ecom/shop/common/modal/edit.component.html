@@ -1,0 +1,36 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-body">
+      <button type="button" class="close">&times;</button>
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 text-center">
+          <p class="title text-uppercase">{{product.p_name}}</p>
+          <h2><sup>{{product.c_currency}}</sup> {{product.p_originalprice*product.p_quantity}}</h2>
+          <div class="productcolors">
+            <p class="text-uppercase"><strong>{{product.p_selected_color.name}}</strong></p>
+            <div class="radio" *ngFor="let color of product.p_available_options.colors">
+              <label>
+                <input type="radio" name="{{color.name}}" value="{{color.name}}" [(ngModel)]="product.p_selected_color.name">
+                <span [ngStyle]="{ 'background-color': color.hexcode}"></span>
+              </label>
+            </div>
+          </div>
+          <div class="productoptions">
+            <select [(ngModel)]="product.p_selected_size.code">
+              <option class="" *ngFor="let size of product.p_available_options.sizes" value="{{size.code}}">
+                {{size.name}}
+              </option>
+            </select>
+            <span class=" p_quantity">
+              <input type="number" min="1" name="p_quantity" [(ngModel)]="product.p_quantity" value="{{product.p_quantity}}">
+            </span>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg" (click)="confirm()"> EDIT </button>
+        </div>
+        <div class="col-sm-6 col-xs-12 product-img">
+          <img src="assets/img/{{product.p_id}}.jpg" alt="Mountain View">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

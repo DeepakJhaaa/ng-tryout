@@ -1,0 +1,169 @@
+<div *ngIf="products">
+  <section id="shoppingBag">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-xs-8">
+          <h1>Your Shopping Bag</h1>
+        </div>
+        <div class="col-sm-12 col-xs-4 productinfo-bar">
+          <div class="col-sm-3">
+            3 ITEMS
+          </div>
+          <div class="col-sm-9 hidden-xs">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6 ">
+              <div class="col-sm-4 text-center">
+                SIZE
+              </div>
+              <div class="col-sm-4 text-center">
+                QTY
+              </div>
+              <div class="col-sm-4 text-right">
+                PRICE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row productlist">
+        <div *ngFor="let product of products">
+          <div class="col-sm-12 product">
+            <div class="col-sm-3 col-xs-6 text-center" (click)=addItem(product)>
+              <img src="{{product.image}}" alt="Mountain View">
+            </div>
+            <div class="col-sm-9 col-xs-6">
+              <div class="col-sm-6">
+                <h4>{{product.title}}</h4>
+                <p>Brand #:
+                  <span class="text-uppercase">{{product.brand}}</span>
+                </p>
+                <p>Colour:
+                  <span class="text-capitalize">{{product.colour.title}}</span>
+                </p>
+              </div>
+              <div class="col-sm-6 product-info">
+                <div class="col-sm-4 p_size text-uppercase">
+                  <p>{{product.rating}}</p>
+                </div>
+                <div class="col-sm-4 p_quantity">
+                  <input type="number" min="1" name="p_quantity" [(ngModel)]="quantity" value="{{quantity}}">
+                </div>
+                <div class="col-sm-4 p_price">
+                  <h3>
+                    <sup>{{product.price.final_price}}</sup> {{product.price.final_price*quantity | number : '1.2-2'}}</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-12 action-items">
+              <div class="col-sm-8">
+                <ul class="list-inline">
+                  <li (click)=editItem(product)>EDIT</li>
+                  <li>X REMOVE</li>
+                  <li>SAVE FOR LATER</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Grid Section -->
+  <section id="checkOut">
+    <div class="container" *ngIf="products">
+      <div class="row">
+        <div class="col-sm-4 hidden-xs support">
+          <p>
+            <strong>Need help
+              <br> or have questions ?</strong>
+          </p>
+          <p>Call Customer Service at
+            <br> 1-800-555-5555</p>
+          <p>
+            <a>Chat with one of
+              <br> out stylist</a>
+          </p>
+          <p>
+            <a>See return
+              <br> & exchange policy</a>
+          </p>
+        </div>
+        <div class="col-sm-8 col-xs-12">
+          <div class="row apply-code">
+            <div class="col-sm-12 no-padding">
+              <div class="col-sm-6 col-xs-12">
+                <p>ENTER PROMOTION CODE
+                  <br> OR GIFT CARD</p>
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                <button type="button" class="btn btn-default  btn-lg">APPLY</button>
+                <input type="text" class="form-control" id="">
+              </div>
+            </div>
+          </div>
+          <div class="row estimate">
+            <div class="col-xs-12  no-padding">
+              <div class="col-xs-8 lbl">
+                <p>
+                  <strong>SUBTOTAL</strong>
+                </p>
+              </div>
+              <div class="col-xs-4 text-right">
+                <h3>
+                  <sup>$</sup>{{getCheckout().subtotal | number : '1.2-2'}}</h3>
+              </div>
+            </div>
+            <div class="col-xs-12  no-padding">
+              <div class="col-xs-8  lbl">
+                <p>
+                  <strong>PROMOTION CODE
+                    <span>JF10</span> APPLIED</strong>
+                </p>
+              </div>
+              <div class="col-xs-4 text-right">
+                <h3>-
+                  <sup>$</sup>{{getCheckout().discount | number : '1.2-2'}}</h3>
+              </div>
+            </div>
+            <div class="col-xs-12 no-padding">
+              <div class="col-xs-8 lbl">
+                <p>
+                  <strong>ESTIMATED SHIPPING*</strong>
+                </p>
+                <p>You qualify for free shipping because your order is over $50*</p>
+              </div>
+              <div class="col-xs-4 text-right lbl">
+                <p>
+                  <strong>FREE</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row total">
+            <div class="col-xs-12 no-padding">
+              <div class="col-xs-8">
+                <h3>ESTIMATED TOTAL</h3>
+                <p>Tax will be applied during checkout </p>
+              </div>
+              <div class="col-xs-4 text-right">
+                <h2>
+                  <sup>$</sup>{{getCheckout().total | number : '1.2-2'}}</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row checkout-action no-padding text-right">
+            <div class="col-xs-12 lbl">
+              <a class="continue"> CONTINUE CHECKOUT </a>
+              <button type="button" class="btn btn-primary btn-lg"> CHECKOUT </button>
+            </div>
+            <div class="col-xs-12 lbl">
+              <p>
+                <img src="assets/shop-assets/img/lock.jpg" alt="Mountain View"> Secure Checkout. Shopping is always safe & secure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

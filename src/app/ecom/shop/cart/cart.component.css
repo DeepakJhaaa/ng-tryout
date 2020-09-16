@@ -1,0 +1,382 @@
+.productinfo-bar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #eee;
+}
+
+.productlist {
+  border-top: 10px solid #eee;
+  border-bottom: 10px solid #eee;
+}
+
+.product {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+}
+.product:hover {
+  border: 1px solid #eee;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.p_size {
+  text-align: center;
+}
+
+.p_size p {
+  line-height: 26px;
+}
+
+.p_quantity {
+  text-align: center;
+}
+
+.p_quantity input {
+  padding: 5px;
+  width: 48px;
+  border: 1px solid #eeeeee;
+  text-align: center;
+}
+
+.p_price {
+  text-align: right;
+}
+
+.p_price h3 {
+  margin-top: 0px;
+}
+
+sup {
+  font-size: 60%;
+  top: -0.4em;
+}
+
+.action-items {
+  padding-top: 30px;
+}
+
+.list-inline {
+  margin-left: -10px;
+}
+
+.action-items .list-inline li {
+  border-right: 1px solid #ccc;
+  line-height: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.action-items .list-inline li:hover {
+  color: #333;
+}
+
+.action-items .list-inline li:last-child {
+  border-right: none;
+}
+
+.support p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 18px;
+  margin-bottom: 0px;
+}
+
+.support p a {
+  text-decoration: underline;
+  color: #777;
+  cursor: pointer;
+}
+
+.apply-code,
+.total {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  border-bottom: 10px solid #eee;
+}
+
+.apply-code .form-control {
+  border-radius: 0px;
+  width: 60%;
+  height: 46px;
+  float: right;
+  margin-right: 20px;
+  font-size: 20px;
+  box-shadow: none;
+}
+
+.apply-code .btn-default {
+  float: right;
+  box-shadow: none;
+  border-radius: 0px;
+  outline: none;
+}
+
+.apply-code p {
+  margin-bottom: 0;
+}
+
+.estimate {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+#checkOut .lbl {
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+.estimate p {
+  line-height: 18px;
+  margin-bottom: 0px;
+}
+
+.checkout-action a {
+  margin-right: 40px;
+  text-decoration: underline;
+  color: #777;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #0089ff;
+  border-color: #0089ff;
+  box-shadow: none;
+  border-radius: 0px;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background-color: #40a8ff;
+  border-color: #40a8ff;
+  box-shadow: none;
+  border-radius: 0px;
+  outline: none;
+}
+
+.product-img {
+  text-align: center;
+}
+
+.product-img img {
+  height: 250px;
+  width: auto;
+  margin-top: 40px;
+}
+
+.modal-dialog .modal-content {
+  border-radius: 0px;
+}
+
+.list-inline.colors {
+  margin-left: 0;
+}
+
+.list-inline.colors > li {
+  width: 30px;
+  height: 20px;
+  margin: 5px;
+}
+
+.modal-dialog .modal-content {
+  padding-bottom: 40px;
+}
+
+.modal-dialog .modal-content p.title {
+  font-size: 18px;
+  border-top: 10px solid #eee;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
+.modal-dialog .modal-content h2 {
+  font-size: 40px;
+  color: #555;
+}
+
+.modal-dialog .modal-content sup {
+  right: -0.2em;
+}
+
+.modal-content .productoptions {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.modal-content .productoptions select {
+  font-size: 16px;
+  padding: 8px 4px;
+  border: 1px solid #ccc;
+  text-transform: capitalize;
+  outline: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.modal-content .btn-lg {
+  padding: 10px 48px;
+}
+
+.modal-content .close {
+  font-size: 40px;
+  font-weight: 100;
+  margin-top: -15px;
+  margin-right: -9px;
+}
+
+.productcolors .radio {
+  display: inline-block;
+}
+
+.productcolors label {
+  position: relative;
+  padding: 0;
+}
+
+.productcolors span {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  margin: 5px;
+}
+
+.productcolors .radio input[type='radio'] {
+  visibility: hidden;
+}
+
+.productcolors .radio input[type='radio']:checked + span {
+  border: 1px solid #777;
+}
+
+.modal-content .p_quantity {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.modal-content .p_quantity input {
+  font-size: 16px;
+  padding: 8px 4px;
+  border: 1px solid #ccc;
+  height: 36px;
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 60px;
+  }
+  .apply-code .form-control {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+  .no-padding > [class*='col-'] {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  section {
+    margin-bottom: 30px;
+  }
+  .product p {
+    margin-bottom: 0;
+  }
+  .product-info {
+    margin-top: 0px;
+  }
+  .productinfo-bar {
+    border-top: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: right;
+    line-height: 33px;
+  }
+  .p_size {
+    padding-left: 40px;
+    text-align: left;
+  }
+  .p_size::before {
+    content: 'Size:';
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    text-transform: capitalize;
+  }
+  .p_quantity {
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .p_quantity::before {
+    content: 'QTY:';
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    text-transform: capitalize;
+  }
+  .p_price {
+    margin-left: -15px;
+    margin-top: 20px;
+    text-align: left;
+  }
+  .apply-code {
+    text-align: center;
+  }
+  .apply-code p {
+    margin-bottom: 20px;
+  }
+  .apply-code .btn-default {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 20px;
+  }
+  .productinfo-bar {
+    border-top: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: right;
+    line-height: 22px;
+  }
+  .apply-code .btn-default {
+    margin-right: 40px;
+  }
+  .apply-code .form-control {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p_price h3 {
+    margin-top: 0px;
+  }
+}
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  header .intro-text .name {
+    font-size: 4.75em;
+  }
+  header .intro-text .skills {
+    font-size: 1.75em;
+  }
+}
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}

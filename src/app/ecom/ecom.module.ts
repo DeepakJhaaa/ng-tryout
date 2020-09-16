@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { NgModule } from '@angular/core';
+import { EcomRoutingModule } from './ecom-routing.module';
+import { EcomComponent } from './ecom.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [EcomComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    EcomRoutingModule
+  ],
+  bootstrap: [EcomComponent]
 })
 export class EcomModule { }

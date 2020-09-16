@@ -1,0 +1,35 @@
+[
+  {
+    "id": "SHOEWPCWKQJFGDBQ",
+    "colour": { "color": "#00AF33", "title": "Green" },
+    "brand": "peter england pe",
+    "discount": 0,
+    "rating": 3.8,
+    "image":
+      "https://rukminim1.flixcart.com/image/312/312/j752nww0/shoe/h/5/e/1055-8-provogue-royal-blue-original-imaexgcfmfghaf8f.jpeg?q=70",
+    "price": { "final_price": 2399 },
+    "title": "Provogue Running Shoes For Men"
+  },
+  {
+    "id": "SHOEZURHKVX24H8P",
+    "colour": { "color": "#33A1DE", "title": "Blue" },
+    "brand": "znopy",
+    "discount": 10,
+    "rating": 4.3,
+    "image":
+      "https://rukminim1.flixcart.com/image/312/312/jao8uq80/shoe/3/r/q/sm323-9-sparx-white-original-imaezvxwmp6qz6tg.jpeg?q=70",
+    "price": { "final_price": 749 },
+    "title": "Sparx SD0323G Canvas Shoes For Men"
+  },
+  {
+    "id": "SHOERHTCZRH8YGMW",
+    "colour": { "color": "#FFD700", "title": "Gold" },
+    "brand": "gowell",
+    "discount": 50,
+    "rating": 4,
+    "image":
+      "https://rukminim1.flixcart.com/image/312/312/shoe/2/p/r/ar4697-414-8-lotto-414-original-imaes9ebjqy4g8cn.jpeg?q=70",
+    "price": { "mrp": 2299, "final_price": 1149 },
+    "title": "Lotto Running Shoes For Men"
+  }
+]

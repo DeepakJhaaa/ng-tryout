@@ -1,0 +1,87 @@
+<section class="todo" id="fkart">
+  <div class="container">
+    <div class="row">
+      <!-- Filters List -->
+      <div id="filters" class="filters">
+        <h2>Filters</h2>
+        <div *ngFor="let filter of filters">
+          <div class="price-filter" *ngIf="filter.type == 'PRICE'">
+            <h3>PRICE</h3>
+            <div>
+              <select onchange="minFilter(this)">
+                <option value='{{minPrice.key}}' *ngFor="let minPrice of filter.values">
+                  {{minPrice.displayValue}}
+                </option>
+              </select>
+              <span>to</span>
+              <select onchange="maxFilter(this)">
+                <option value='{{maxPrice.key}}' *ngFor="let maxPrice of filter.values.reverse()">
+                  {{maxPrice.displayValue}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="brand-filter" *ngIf="filter.type == 'BRAND'">
+            <h3>BRAND</h3>
+            <div class="search">
+              <input type="search" placeholder="Search Brand" onkeyup="brandSearch(this.value)">
+            </div>
+            <div id="brandFilter"></div>
+          </div>
+          <div class="color-filter" *ngIf="filter.type == 'COLOUR'">
+            <h3>COLOR</h3>
+            <div id="colorFilter">
+              <ul>
+                <li *ngFor="let color of filter.values">
+                  <input type="checkbox" name="{{color.color}}" onchange="colourFilter(this)" />
+                  <span class="color-box" [style.backgroundColor]="color.color"> </span>
+                  <span class="color-title" onClick="colourFilter">{{color.title}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="prodFilterGrid"></div>
+      </div>
+
+      <!-- product Grid -->
+      <div id="" class="product-grid">
+        <div class="search-results">
+          <h2>Showing 666 results for "shoes"</h2>
+        </div>
+        <div class="sorting">
+          <span>Sort By</span>
+          <a onclick="relevance()">Relevance</a>
+          <a onclick="lowToHigh()">Price - Low to High</a>
+          <a onclick="highToLow()">Price - High to Low</a>
+        </div>
+        <div id="productsGrid">
+          <div class="product" *ngFor="let product of products">
+            <img src="{{product.image}}" alt="product" class="prodimg">
+            <h3>{{product.title}}</h3>
+            <div class="rating">
+              <span class="score">
+                {{product.rating}}
+                <span class="star">&#9733;</span>
+              </span>
+            </div>
+            <div class="price">
+              <span class="final" *ngIf="product.price.final_price">
+                {{product.price.final_price}}
+              </span>
+              <span class="mrp" *ngIf="product.price.mrp">
+                {{product.price.mrp}}
+              </span>
+              <span class="discount" *ngIf="product.price.final_price && product.price.mrp">
+                {{calculateDiscount(product.price.final_price, product.price.mrp)}} % off
+              </span>
+            </div>
+            <div class="action">
+              <button type="button" class="btn btn-warning btn-block">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
